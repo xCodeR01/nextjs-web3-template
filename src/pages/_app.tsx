@@ -2,9 +2,11 @@ import React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { darkTheme, globalStyles } from "@/theme";
 import { SessionProvider } from "next-auth/react";
+
 import { Provider as ReduxProvider } from "react-redux";
 import type { AppProps } from "next/app";
 import store from "@/lib/redux";
+import { SolanaProvider } from "@/providers/solana";
 // import type { NextPage } from "next";
 
 // type CustomPage = NextPage & {
@@ -27,7 +29,9 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       <ReduxProvider store={store}>
         <SessionProvider session={pageProps.session} refetchInterval={0}>
-          <Component {...pageProps} />
+          <SolanaProvider>
+            <Component {...pageProps} />
+          </SolanaProvider>
         </SessionProvider>
       </ReduxProvider>
     </NextThemesProvider>

@@ -3,12 +3,12 @@ import Image from "next/image";
 import ThemeToggle from "@/components/examples/theme-toggle";
 import FetchExample from "@/components/examples/fetch";
 import Counter from "@/components/examples/counter";
+import SolanaExample from "@/components/examples/solana";
 import { Container, Box, Row, Col, Text } from "@/components/elements";
 import { IntlExample } from "@/components/examples/intl";
 import { styled } from "@/theme/stitches.config";
 
 const Home: NextPage = () => {
-  
   return (
     <Container
       size="lg"
@@ -32,6 +32,7 @@ const Home: NextPage = () => {
 
       <ThemeToggle />
       <FetchExample />
+      <SolanaExample />
       <Counter />
       <IntlExample />
 

@@ -10,11 +10,15 @@
     "svgr": "npx @svgr/cli -d src/components/icons --ignore-existing --icon --typescript public/icons",
     "analyze": "ANALYZE=true yarn run build",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx}'",
-    "test": "jest --watch"
+    "test": "jest -c test/jest.config.js"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
     "@reduxjs/toolkit": "^1.8.2",
+    "@solana/wallet-adapter-base": "^0.9.5",
+    "@solana/wallet-adapter-phantom": "^0.9.3",
+    "@solana/wallet-adapter-react": "^0.15.4",
+    "@solana/web3.js": "^1.42.0",
     "@stitches/react": "^1.2.8",
     "next": "12.1.6",
     "next-auth": "^4.3.4",
@@ -22,7 +26,8 @@
     "next-translate": "^1.4.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-redux": "^8.0.2"
+    "react-redux": "^8.0.2",
+    "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.1.6",
@@ -32,6 +37,7 @@
     "@testing-library/user-event": "^14.2.0",
     "@types/node": "17.0.33",
     "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.4",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.1",
     "eslint": "8.15.0",
