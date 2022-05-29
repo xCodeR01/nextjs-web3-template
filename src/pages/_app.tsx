@@ -3,8 +3,8 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { darkTheme, globalStyles } from "@/theme";
 import { SessionProvider } from "next-auth/react";
 import { Provider as ReduxProvider } from "react-redux";
-import type { AppProps } from "next/app";
 import store from "@/lib/redux";
+import type { AppProps } from "next/app";
 // import type { NextPage } from "next";
 
 // type CustomPage = NextPage & {
