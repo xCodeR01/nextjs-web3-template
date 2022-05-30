@@ -2,8 +2,6 @@ import React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { darkTheme, globalStyles } from "@/theme";
 import { SessionProvider } from "next-auth/react";
-import { Provider as ReduxProvider } from "react-redux";
-import store from "@/lib/redux";
 import type { AppProps } from "next/app";
 // import type { NextPage } from "next";
 
@@ -25,11 +23,9 @@ export default function App({ Component, pageProps }: AppProps) {
         dark: darkTheme.className,
       }}
     >
-      <ReduxProvider store={store}>
         <SessionProvider session={pageProps.session} refetchInterval={0}>
           <Component {...pageProps} />
         </SessionProvider>
-      </ReduxProvider>
     </NextThemesProvider>
   );
 }
