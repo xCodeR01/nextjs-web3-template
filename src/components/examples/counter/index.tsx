@@ -1,5 +1,5 @@
 import styles from "./counter.module.css";
-import { Box } from "@/components/elements";
+import { Box } from "@/components/layout";
 import { useStore } from "@/store";
 
 function Counter() {
